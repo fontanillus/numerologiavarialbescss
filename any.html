@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calcular número año</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link id="tema" rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/estilos.css" />
+  <link rel="shortcut icon" href="img/faviaño.webp" type="image/x-icon" />
+</head>
+
+<body>
+  <p>
+    <img src="./img/año.webp" alt="foto" />
+  </p>
+  <h1>Numerología - Calcular Número Año</h1>
+
+  <div class="container">
+    <label for="anio">Año:</label>
+    <input id="anio" type="number" min="1900" max="2100" />
+    <button type="button" onclick="calcularNumeroAnio()">Calcular</button>
+    <div id="resultadoAnio"></div>
+  </div>
+  <br>
+  <div class="posicion">
+    <a href="index.html">← Volver a inicio</a>
+  </div>
+  <script src="./js/get.js"></script>
+  <script src="./js/significados.js"></script>
+  <script src="./js/calculos.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const anio = params.get('anio');
+
+      if (anio) {
+        const inputAnio = document.getElementById('anio');
+        if (inputAnio) {
+          inputAnio.value = anio;
+          calcularNumeroAnio(); // función que calcula número año
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

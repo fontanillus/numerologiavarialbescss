@@ -1,0 +1,11 @@
+:root {
+    --color-principal: #4b0082;         /* Índigo intenso para títulos y botones */
+    --color-secundario: #9370db;        /* Lavanda medio para detalles */
+    --color-fondo: #0e0e0e;             /* Fondo más oscuro aún */
+    --color-texto: #ffffff;             /* Blanco puro para máximo contraste */
+    --color-boton: #4b0082;
+    --color-boton-hover: #6a0dad;       /* Hover más claro y notorio */
+    --fuente-principal: 'Arial', sans-serif;
+    --espaciado-seccion: 2rem;
+    --imagen-fondo: url(../img/oscuro.avif); /* para cambiar la imagen */
+}

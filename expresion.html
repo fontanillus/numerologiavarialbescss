@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Numero Expresion Alma</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link id="tema" rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="shortcut icon" href="img/faviexpresion.webp" type="image/x-icon">
+</head>
+
+<body>
+    <!--Está basado en sumar solo las vocales del nombre completo. -->
+    <p>
+        <img src="./img/expresion.jpg" alt="foto">
+    </p>
+    <h1>Numerología - Calcular Número Expresión del Alma</h1>
+    <div class="container">
+        <label for="nombreCompleto">Escribe tu nombre completo:</label>
+        <input id="nombreCompleto" type="text" placeholder="Nombre y apellidos" required>
+        <button type="button" onclick="calcularNumeroExpresionAlma()">Calcular</button>
+        <div id="resultadoExpresionAlma"></div>
+    </div>
+    <br>
+    <div class="posicion">
+        <a href="index.html">← Volver a inicio</a>
+    </div>
+    <script src="./js/get.js"></script>
+    <script src="./js/significados.js"></script>
+    <script src="./js/calculos.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const nombre = params.get('nombre');
+
+            if (nombre) {
+                const nombreDecodificado = decodeURIComponent(nombre.replace(/\+/g, ' '));
+                const inputNombre = document.getElementById('nombreCompleto');
+                if (inputNombre) {
+                    inputNombre.value = nombreDecodificado;
+                    calcularNumeroExpresionAlma(); // función que calcula expresión alma
+                }
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

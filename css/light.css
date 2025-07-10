@@ -1,0 +1,13 @@
+:root {
+    --color-principal: #6a0dad;          /* Púrpura fuerte (mejor contraste que #b399ff) */
+    --color-secundario: #b399ff;         /* Lavanda claro como acento */
+    --imagen-fondo: url('../img/light.webp'); /* Imagen de fondo */
+    --overlay-fondo: rgba(255, 255, 255, 0.85); /* Capa clara sobre la imagen */
+    --color-texto: #111111;              /* Gris casi negro para máxima legibilidad */
+    --color-boton: #6a0dad;              /* Igual al color principal */
+    --color-boton-hover: #a264e1;        /* Hover más brillante pero oscuro */
+    --fuente-principal: 'Arial', sans-serif;
+    --espaciado-seccion: 2rem;
+}
+
+

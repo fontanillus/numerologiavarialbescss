@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calcular Numero Proyecto Sentido</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link id="tema" rel="stylesheet" href="./css/dark.css">
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="shortcut icon" href="img/faviproyecto.png" type="image/x-icon" />
+</head>
+
+<body>
+    <p>
+        <img src="./img/proyecto.png" alt="foto" />
+    </p>
+    <h1>Numerología - Calcular número Proyecto Sentido</h1>
+    <!--Este número se obtiene generalmente a partir de la fecha de nacimiento completa -->
+
+    <label for="fechaNac">Fecha de nacimiento:</label>
+    <input type="date" id="fechaNac" required />
+    <button type="button" onclick="calcularProyectoSentido()">Calcular Proyecto Sentido</button>
+    <div id="resultadoProyectoSentido"></div>
+
+
+    <br>
+    <div class="posicion">
+        <a href="index.html">← Volver a inicio</a>
+    </div>
+    <script src="./js/get.js"></script>
+    <script src="./js/significados.js"></script>
+    <script src="./js/calculos.js"></script>
+
+    <script>
+        function calcularDesdeFecha() {
+            const fecha = document.getElementById('fechaNac').value;
+            // Tu lógica aquí
+            document.getElementById('resultado').textContent = 'Procesado: ' + fecha;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

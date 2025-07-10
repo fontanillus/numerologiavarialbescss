@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calcular número año personal</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link id="tema" rel="stylesheet" href="./css/dark.css">
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="shortcut icon" href="img/faviañopersonal.png" type="image/x-icon" />
+</head>
+
+<body>
+    <p>
+        <img src="./img/añopersonal.jpg" alt="foto" />
+    </p>
+    <h1>Numerología - Calculo número Año Personal</h1>
+    <!--día + mes + añoActual-->
+    <div class="container">
+        <label for="fechaNac">Fecha de nacimiento:</label>
+        <input id="fechaNac" type="date" required>
+        <button type="button" onclick="calcularNumeroAnioPersonal()">Calcular</button>
+        <div id="resultadoAnioPersonal"></div>
+    </div>
+    <br>
+    <div class="posicion">
+        <a href="index.html">← Volver a inicio</a>
+    </div>
+    <script src="./js/get.js"></script>
+    <script src="./js/significados.js"></script>
+    <script src="./js/calculos.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const fecha = params.get('fecha'); // formato YYYY-MM-DD
+
+            if (fecha) {
+                const inputFecha = document.getElementById('fechaNac');
+                if (inputFecha) {
+                    inputFecha.value = fecha;
+                    calcularNumeroAnioPersonal(); // función que calcula año personal
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

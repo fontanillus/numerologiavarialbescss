@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calcular Numero Alma</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link id="tema" rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/estilos.css" />
+  <link rel="shortcut icon" href="./img/favialma.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!--Se obtiene sumando los valores numéricos de las vocales del nombre completo -->
+  <p>
+    <img src="./img/alma.webp" alt="foto" />
+  </p>
+  <h1>Numerología - Calcular Número Alma</h1>
+  <div class="container">
+    <label for="nombreCompleto">Escribe tu nombre completo:</label>
+    <input id="nombreCompleto" type="text" placeholder="Nombre y apellidos" required />
+    <button type="button" onclick="verificar()">Verificar</button>
+    <div id="resultadoAlma"></div>
+  </div>
+  <br />
+  <div class="posicion">
+    <a href="index.html">← Volver a inicio</a>
+  </div>
+
+  <script src="./js/get.js"></script>
+  <script src="./js/significados.js"></script>
+  <script src="./js/calculos.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Obtener parámetro "nombre" de la URL
+      const params = new URLSearchParams(window.location.search);
+      const nombre = params.get('nombre');
+
+      if (nombre) {
+        // Decodificar espacios y caracteres especiales
+        const nombreDecodificado = decodeURIComponent(nombre.replace(/\+/g, ' '));
+        // Poner el nombre en el input
+        const inputNombre = document.getElementById('nombreCompleto');
+        if (inputNombre) {
+          inputNombre.value = nombreDecodificado;
+          // Calcular y mostrar el Número Alma
+          calcularNumeroAlma();
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

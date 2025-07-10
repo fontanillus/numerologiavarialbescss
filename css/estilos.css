@@ -1,0 +1,145 @@
+/*hltm externos*/
+
+body {
+    width: 90%;
+    height: auto;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    margin: 0 auto;
+}
+
+h1,
+button {
+    text-align: center;
+    color: var(--color-texto);
+    background-color: var(--color-principal);
+    border: 5px solid var(--color-boton);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+    border-color: var(--color-boton-hover);
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#nombre {
+    margin-left: 1.8%;
+}
+
+.diseño {
+    border: none;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.diseño:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+
+#resultado,
+#explicacion {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+p,
+.posicion {
+    text-align: center;
+    color: var(--color-texto);
+}
+
+/* ---------------------
+   Media Queries
+--------------------- */
+
+/* Tablets (pantallas entre 600px y 900px) */
+@media (max-width: 900px) {
+    h1,
+    button {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #nombre {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #resultado,
+    #explicacion {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Móviles (pantallas de hasta 600px) */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    button,
+    .diseño {
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #nombre {
+        width: 100%;
+        margin: 0;
+    }
+
+    #resultado,
+    #explicacion {
+        font-size: 0.95rem;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Ocultar elementos específicos */
+.container label,
+.container input,
+.container button {
+    display: none;
+}
+
+label[for="fechaNac"],
+#fechaNac,
+button[type="button"] {
+    display: none;
+}
